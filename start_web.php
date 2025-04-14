@@ -18,7 +18,8 @@ use Workerman\Connection\TcpConnection;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-$web = new Worker("http://0.0.0.0:8787");
+$port = getenv('PORT') ?: 8787; // fallback to 8787 for local dev
+$web = new Worker("http://0.0.0.0:$port");
 
 $web->count = 2;
 
