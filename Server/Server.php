@@ -41,7 +41,7 @@ class Server
     
     public function addConnection($connection) 
     {
-        $this->_connections[$connection->id] = connection;
+        $this->_connections[$connection->id] = $connection;
     }
     
     public function removeConnection($id) 
