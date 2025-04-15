@@ -18,8 +18,9 @@ use Workerman\Connection\TcpConnection;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-$port = getenv('PORT') ?: 8787; // fallback to 8787 for local dev
+$port = getenv('PORT') ?: 9000; // Railway injects PORT env var
 $web = new Worker("http://0.0.0.0:$port");
+
 
 $web->count = 2;
 
